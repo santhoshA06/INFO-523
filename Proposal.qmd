@@ -1,1 +1,28 @@
+---
+title: "Global Energy Trends"
+subtitle: "Insights into Consumption and Sustainability"
+author: 
+  - name: "DataDetectives - Ayesha, Abhishek, Shreemithra, Toluwanimi, Valerie, Alyssa"
+    affiliations:
+      - name: "School of Information, University of Arizona"
+description: "The goal of this project is to analyze the complex relationships between economic and population growth, sustainable energy practices, and energy consumption"
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    code-line-numbers: true
+    embed-resources: true
+editor: visual
+code-annotations: hover
+execute:
+  warning: false
+jupyter: python3
+---
+
+## Introduction
+
+## Dataset
+The Our World Our Data Energy dataset.
+
 
