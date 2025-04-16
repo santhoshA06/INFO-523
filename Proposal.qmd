@@ -68,6 +68,7 @@ K- means clustering for question 3.
 • Conclusion and Insights: 
 Interpret the results to highlight energy transition trends, regional adoption differences, and 
 provide insights to accelerate renewable energy adoption. 
+
 Expected Outcomes 
 • Countries with higher renewable energy adoption generally exhibit stronger GDPs, as 
 economic stability enables greater investment in clean energy infrastructure. 
