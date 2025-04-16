@@ -1,0 +1,55 @@
+# Import required libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pycountry_convert as pc
+
+# Load the dataset
+df = pd.read_csv("D:\Data Mining Project\INFO-523\INFO-523\Data\owid-energy-data.csv")
+
+# Select relevant columns
+df = df[["country", "iso_code", "year", "renewables_share_energy"]]
+
+# Filter for years 2000 onward and drop rows with missing values
+df = df[df["year"] >= 2000]
+df = df.dropna(subset=["renewables_share_energy", "iso_code"])
+
+# Compute Global Trend (average renewable share across all countries per year)
+global_trend = df.groupby("year")["renewables_share_energy"].mean().reset_index()
+
+# Map ISO codes to continents
+def map_country_to_continent(iso_code):
+    try:
+        country_alpha2 = pc.country_alpha3_to_country_alpha2(iso_code)
+        continent_code = pc.country_alpha2_to_continent_code(country_alpha2)
+        continent_name = pc.convert_continent_code_to_continent_name(continent_code)
+        return continent_name
+    except:
+        return None
+
+df["continent"] = df["iso_code"].apply(map_country_to_continent)
+df = df.dropna(subset=["continent"])
+
+# Compute average renewable share per continent per year
+continent_trend = df.groupby(["continent", "year"])["renewables_share_energy"].mean().reset_index()
+
+# Plotting
+plt.figure(figsize=(12, 6))
+sns.lineplot(data=continent_trend, x="year", y="renewables_share_energy", hue="continent", marker="o")
+plt.title("Renewable Energy Share Trends by Continent (2000–Latest)")
+plt.xlabel("Year")
+plt.ylabel("Renewables Share of Total Energy (%)")
+plt.grid(True)
+plt.legend(title="Continent")
+plt.tight_layout()
+plt.show()
+
+# Plot global trend as well
+plt.figure(figsize=(10, 5))
+plt.plot(global_trend["year"], global_trend["renewables_share_energy"], marker='o', color='black')
+plt.title("Global Average Renewable Energy Share (2000–Latest)")
+plt.xlabel("Year")
+plt.ylabel("Renewables Share of Total Energy (%)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
