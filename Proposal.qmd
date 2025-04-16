@@ -20,9 +20,64 @@ execute:
 jupyter: python3
 ---
 
-## Introduction
-
 ## Dataset
 The Our World Our Data Energy dataset.
 
 
+## Introduction 
+As global energy demands rise and environmental challenges grow, understanding energy 
+consumption patterns is essential. The Our World in Data Energy Dataset provides insights from 1900 
+to 2022, covering key metrics such as primary energy consumption, per capita energy use, energy 
+mix, and electricity composition. This data helps analyze the connections between economic 
+development, population growth, and sustainable energy practices. 
+This project leverages a data-driven approach to identify trends, disparities, and pathways toward a 
+cleaner global energy system. To support this, we will develop an interactive dashboard that visualizes 
+historical and modern energy consumption trends. This tool will empower policymakers, researchers, 
+and the public to make informed decisions about the future of energy. 
+"The data used in this analysis has been sourced from Our World in Data 
+(https://ourworldindata.org/energy)." 
+
+Parameters 
+• Hydropower 
+• Other renewable energies  
+• Renewable energies 
+• Solar energy 
+• Wind energy 
+• Biofuel energy 
+• Year 
+• Country 
+• GDP 
+• Biofuel Energy 
+
+Objectives 
+1. How have global renewable energy shares changed over the last two decades, and what 
+trends can be detected across continents? 
+2. How does economic growth impact the rate of renewable energy adoption across different 
+continents? 
+3. How can countries be grouped based on their renewable and fossil fuel usage and what 
+insights can be derived from these clusters?
+
+Methods 
+• Data cleaning and preparation: Ensure data quality and consistency. 
+• Exploratory Data Analysis (EDA): Visualize data distributions (Heatmap) and relationships. 
+(Stacked Area Chart, Scatter plots, Scatter plots with clusters). 
+• Model Selection: Employ appropriate techniques: 
+Time series for questions 1. 
+Regression analysis (Random Forest analysis) for question 2 
+K- means clustering for question 3. 
+• Conclusion and Insights: 
+Interpret the results to highlight energy transition trends, regional adoption differences, and 
+provide insights to accelerate renewable energy adoption. 
+Expected Outcomes 
+• Countries with higher renewable energy adoption generally exhibit stronger GDPs, as 
+economic stability enables greater investment in clean energy infrastructure. 
+• In contrast, nations reliant on fossil fuels often face lower GDPs, constrained by financial and 
+technological limitations. 
+• Renewable energy adoption is driven by policy support, innovation, and economic capacity, 
+shaping global energy transitions. 
+• Understanding this relationship helps identify opportunities for sustainable growth and 
+energy diversification. 
+• Clustering countries reveals that high renewable energy usage is often associated with high 
+GDP, while high fossil fuel usage tends to correlate with low GDP. Countries with moderate 
+renewable energy adoption are typically in the process of transitioning to greener energy 
+sources.
