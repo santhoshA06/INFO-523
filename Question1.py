@@ -26,7 +26,7 @@ continent_trend = df.groupby(["continent", "year"])["renewables_share_energy"].m
 
 plt.figure(figsize=(12, 6))
 sns.lineplot(data=continent_trend, x="year", y="renewables_share_energy", hue="continent", marker="o")
-plt.title("Renewable Energy Share Trends by Continent (2000–Latest)")
+plt.title("Renewable Energy Share Trends by Continent")
 plt.xlabel("Year")
 plt.ylabel("Renewables Share of Total Energy (%)")
 plt.grid(True)
@@ -37,7 +37,7 @@ plt.show()
 # Global trend plot
 plt.figure(figsize=(10, 5))
 plt.plot(global_trend["year"], global_trend["renewables_share_energy"], marker='o', color='black')
-plt.title("Global Average Renewable Energy Share (2000–Latest)")
+plt.title("Global Average Renewable Energy Share")
 plt.xlabel("Year")
 plt.ylabel("Renewables Share of Total Energy (%)")
 plt.grid(True)
