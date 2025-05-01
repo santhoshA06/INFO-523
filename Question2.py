@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("Data\owid-energy-data.csv")
+df = pd.read_csv("Data/owid-energy-data.csv")
 
 # Dictionary to map countries to continents (expand as needed)
 country_to_continent = {
