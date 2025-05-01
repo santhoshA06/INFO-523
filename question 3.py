@@ -2,8 +2,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-file_path = r"C:\Users\paama\Documents\HLT MS\SPRING 2025\INFO 523 - Data Mining and Discovery\owid-energy-data.csv"
-df = pd.read_csv(file_path)
+df = pd.read_csv("Data\owid-energy-data.csv")
 
 features = [
     'fossil_fuel_consumption',
