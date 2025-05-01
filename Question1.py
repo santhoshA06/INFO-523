@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pycountry_convert as pc
-df = pd.read_csv("D:\Data Mining Project\INFO-523\INFO-523\Data\owid-energy-data.csv")
+df = pd.read_csv("Data\owid-energy-data.csv")
 df = df[["country", "iso_code", "year", "renewables_share_energy"]]
 
 df = df[df["year"] >= 2000]
